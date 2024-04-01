@@ -1,86 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Do You Love Me? </title>
-    <style>
-      body {
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Supense </title>
+<style>
+    body {background-color: #e63bc1;
+        font-family: Arial, sans-serif;
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        background: url("https://images.pexels.com/photos/4041285/pexels-photo-4041285.jpeg")
-          no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        color: #333;
-      }
-      h1 {
-        font-size: 2.5em;
-        margin-top: 1em;
-        font-weight: 900;
-      }
-      button {
-        margin: 0 20px;
-        margin-bottom: 30px;
-        padding: 10px 30px;
-        font-size: 25px;
-        cursor: pointer;
-        background-color: #333;
+        margin-top: 100px;
+    }
+    h1 {
+        color: #ff5a5f;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        background-color: #ff5a5f;
         color: white;
         border: none;
-        border-radius: 5px;
-      }
-      .video-container {
-        display: none;
-      }
-      video {
-        width: 90%;
-        height: 65vh;
-      }
-      @media screen and (max-width: 600px) {
-        h1 {
-          font-size: 1.9em;
-        }
-        button {
-          font-size: 20px;
-        }
-      }
-    </style>
-  </head>
-  <body class="content">
-    <h1>Do You Love Me <span id="emoji">💗</span>?</h1>
-    <button onclick="playVideo('video1')">Yes</button>
-    <button onclick="playVideo('video2')">No</button>
-    <div id="video1" class="video-container">
-      <video autoplay>
-        <source src="video1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div id="video2" class="video-container">
-      <video autoplay>
-        <source src="video2.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <p id="message"></p>
-    <script>
-      function playVideo(id) {
-        var containers = document.getElementsByClassName("video-container");
-        for (var i = 0; i < containers.length; i++) {
-          containers[i].style.display = "none";
-          // Pause all videos
-          containers[i].getElementsByTagName("video")[0].pause();
-        }
-        document.getElementById(id).style.display = "block";
-        var message = "You answered: " + (id === "video1" ? "Yes" : "No");
-        document.getElementById("message").innerText = message;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #e63b3f;
+    }
+</style>
+</head>
+<body>
 
-        // Start playing the video
-        document.getElementById(id).getElementsByTagName("video")[0].play();
-      }
+<h2>Today, I want to ask you a question that has been on my mind for a long time.Can i ask you");
+ </h2>   
+ <button onclick="displayMessage()">Yes! Ask Me</button>
+ <script>
+    function displayMessage() {
+        alert("You make every moment special. Will you spend the rest of your life with me?");
+    }
     </script>
-  </body>
+
+</body>
 </html>
